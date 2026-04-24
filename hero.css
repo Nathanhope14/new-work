@@ -1,0 +1,101 @@
+#hero {
+    position: relative; 
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 100px 2rem 4rem;
+    overflow: hidden;
+    z-index: 1;
+    align-content: center;
+  }
+  .glitch{
+    font-size: 40px;
+  }
+  
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .hero-left { position: relative; 
+    margin-left: 350px;
+  
+  }
+  
+  .hero-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--cyan);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 8px;
+    
+  }
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--cyan);
+  }
+  
+  .hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .hero-title .accent  { color: var(--matrix); text-shadow: var(--glow); }
+  .hero-title .accent2 { color: var(--cyan);   text-shadow: var(--glow-cyan); }
+  
+  .hero-sub {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .typed-cursor { color: var(--matrix); animation: blink 1s infinite; }
+  
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  
+  .hero-stats {
+    display: flex; gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; }
+  .stat-num {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--matrix);
+    text-shadow: var(--glow);
+  }
+  .stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+  }
+
+  .hero-tag{
+    margin-left: 100px;
+    margin-top: 30px;
+  }
+
+  .hero-ctas{
+    margin-left: 125px ;
+  }
+
+  .hero-stats{
+    margin-left: 180px;
+    font-size: 1px;
+  }
+  

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero Trace Cyber Legacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">[</span>
+      <span class="brand-text">ZERO<span class="brand-accent">TRACE</span></span>
+      <span class="brand-bracket">]</span>
+    </div>
+    <div class="nav-links">
+      <button class="nav-btn active" data-view="modules">MODULES</button>
+      <button class="nav-btn" data-view="terminal"  onclick="closeMenu()">TERMINAL</button>
+      <button class="nav-btn" data-view="progress">PROGRESS</button>
+      <button class="nav-btn" data-view="ctf">CTF LAB</button>
+    </div>
+    <div class="nav-badge">
+      <span class="badge-label">CLEARANCE</span>
+      <span id="nav-progress-badge">0% COMPLETE</span>
+    </div>
+  </nav>
+
+  <div class="hero-left">
+    <div class="hero-tag">CYBERSECURITY EDUCATION PLATFORM</div>
+
+    <h1 class="hero-title fade-in fade-in-delay-1">
+      <span class="glitch" data-text="ZERO">ZERO TRACE CYBER LEGACY</span><br />
+      
+    </h1>
+
+    <p class="hero-sub fade-in fade-in-delay-2">
+      <span id="typed-text"></span><span class="typed-cursor">█</span>
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#modules"      class="btn-primary">BEGIN TRAINING</a>
+      <a href="#terminal" class="btn-secondary">OPEN TERMINAL</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num" data-target="12">0</span>
+        <span class="stat-label">MODULES</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="48">0</span>
+        <span class="stat-label">LESSONS</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-label">CTF LABS</span>
+      </div>
+    </div>
+  </div>  
+    ```
+    <div class="modules-grid">
+    
+      <div class="module-card" onclick="openLesson('recon')">
+        <span class="module-icon">🔍</span>
+        <div class="module-num">MODULE_01</div>
+        <div class="module-title">Reconnaissance &amp; OSINT</div>
+        <div class="module-desc">Learn passive and active recon techniques. Gather intelligence without leaving a trace.</div>
+        <div class="module-tags">
+          <span class="tag">BEGINNER</span>
+          <span class="tag cyan">OSINT</span>
+          <span class="tag amber">4 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~45 min</span><span class="t-success">UNLOCKED</span></div>
+        <button class="module-btn">→ START MODULE</button>
+      </div>
+    
+      <div class="module-card" onclick="openLesson('networking')">
+        <span class="module-icon">🌐</span>
+        <div class="module-num">MODULE_02</div>
+        <div class="module-title">Network Fundamentals</div>
+        <div class="module-desc">TCP/IP, protocols, ports, and how data travels across networks. Essential foundations.</div>
+        <div class="module-tags">
+          <span class="tag">BEGINNER</span>
+          <span class="tag cyan">NETWORKING</span>
+          <span class="tag amber">6 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~60 min</span><span class="t-success">UNLOCKED</span></div>
+        <button class="module-btn">→ START MODULE</button>
+      </div>
+    
+      <div class="module-card" onclick="openLesson('linux')">
+        <span class="module-icon">🐧</span>
+        <div class="module-num">MODULE_03</div>
+        <div class="module-title">Linux for Hackers</div>
+        <div class="module-desc">Master the terminal, file system, permissions, scripting, and essential hacking tools.</div>
+        <div class="module-tags">
+          <span class="tag">BEGINNER</span>
+          <span class="tag cyan">LINUX</span>
+          <span class="tag amber">8 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~90 min</span><span class="t-success">UNLOCKED</span></div>
+        <button class="module-btn">→ START MODULE</button>
+      </div>
+    
+      <div class="module-card" onclick="openLesson('webvulns')">
+        <span class="module-icon">🕷️</span>
+        <div class="module-num">MODULE_04</div>
+        <div class="module-title">Web Vulnerabilities</div>
+        <div class="module-desc">XSS, SQL injection, CSRF, IDOR — understand and ethically exploit web application flaws.</div>
+        <div class="module-tags">
+          <span class="tag">INTERMEDIATE</span>
+          <span class="tag cyan">WEB SEC</span>
+          <span class="tag amber">7 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~75 min</span><span class="t-warn">LOCKED</span></div>
+        <button class="module-btn" disabled>🔒 COMPLETE PREV</button>
+      </div>
+    
+      <div class="module-card locked">
+        <span class="module-icon">🔐</span>
+        <div class="module-num">MODULE_05</div>
+        <div class="module-title">Cryptography</div>
+        <div class="module-desc">Symmetric/asymmetric encryption, hashing, PKI, TLS/SSL, and breaking weak ciphers.</div>
+        <div class="module-tags">
+          <span class="tag">INTERMEDIATE</span>
+          <span class="tag cyan">CRYPTO</span>
+          <span class="tag amber">6 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~80 min</span><span class="t-warn">LOCKED</span></div>
+        <button class="module-btn" disabled>🔒 LOCKED</button>
+      </div>
+    
+      <div class="module-card locked">
+        <span class="module-icon">⚔️</span>
+        <div class="module-num">MODULE_06</div>
+        <div class="module-title">Penetration Testing</div>
+        <div class="module-desc">Full pentest methodology: planning, scanning, exploitation, post-exploitation, and reporting.</div>
+        <div class="module-tags">
+          <span class="tag">ADVANCED</span>
+          <span class="tag cyan">PENTEST</span>
+          <span class="tag amber">10 LESSONS</span>
+        </div>
+        <div class="module-progress"><div class="module-progress-fill" style="width:0%"></div></div>
+        <div class="module-meta"><span>~120 min</span><span class="t-warn">LOCKED</span></div>
+        <button class="module-btn" disabled>🔒 LOCKED</button>
+      </div>
+    
+    </div>
+    <!-- ── TERMINAL VIEW ── -->
+    <section id="view-terminal" class="view">
+      <div class="view-header">
+        <p class="view-tag">// INTERACTIVE SHELL</p>
+        <h1 class="view-title">KALI <span class="accent">TERMINAL</span></h1>
+        <p class="view-desc">Simulate real penetration testing commands. Type <code>help</code> to see available commands.</p>
+      </div>
+      <div class="terminal-wrapper">
+        <div class="terminal-titlebar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">root@zerotrace:~#</span>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="t-line"><span class="t-green">root@zerotrace</span><span class="t-white">:</span><span class="t-blue">~</span><span class="t-white">$</span> <span class="t-dim">System initialized. Type <span class="t-green">help</span> to begin.</span></div>
+        </div>
+        <div class="terminal-input-row">
+          <span class="t-prompt-label"><span class="t-green">root@zerotrace</span><span class="t-white">:</span><span class="t-blue">~</span><span class="t-white">$</span></span>
+          <input type="text" id="terminal-input" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="enter command..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROGRESS VIEW ── -->
+    <section id="view-progress" class="view">
+      <div class="view-header">
+        <p class="view-tag">// OPERATOR STATS</p>
+        <h1 class="view-title">MISSION <span class="accent">PROGRESS</span></h1>
+        <p class="view-desc">Track your journey through the Zero Trace curriculum. All data is stored locally on your device.</p>
+      </div>
+      <div class="progress-dashboard">
+        <div class="stat-card primary">
+          <div class="stat-value" id="stat-overall">0%</div>
+          <div class="stat-label">OVERALL PROGRESS</div>
+          <div class="progress-bar-wrap"><div class="progress-bar" id="bar-overall"></div></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value accent" id="stat-points">0</div>
+          <div class="stat-label">CTF POINTS</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-modules">0/6</div>
+          <div class="stat-label">MODULES DONE</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-flags">0/4</div>
+          <div class="stat-label">FLAGS CAPTURED</div>
+        </div>
+      </div>
+      <div class="module-progress-list" id="module-progress-list">
+        <!-- Injected by JS -->
+      </div>
+      <div class="reset-row">
+        <button class="btn-danger" id="reset-btn">⚠ RESET ALL PROGRESS</button>
+      </div>
+    </section>
+
+    <!-- ── CTF VIEW ── -->
+    <section id="view-ctf" class="view">
+      <div class="view-header">
+        <p class="view-tag">// CAPTURE THE FLAG</p>
+        <h1 class="view-title">CTF <span class="accent">LABORATORY</span></h1>
+        <p class="view-desc">Solve each challenge, capture the flag, and earn points. Flags are case-sensitive.</p>
+      </div>
+      <div class="ctf-grid" id="ctf-grid">
+        <!-- Injected by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-brand">
+      <div class="footer-logo">[ZERO<span class="accent">TRACE</span>]</div>
+      <p class="footer-tagline">Leave no trace. Learn everything.</p>
+    </div>
+    <div class="footer-col">
+      <h4>MODULES</h4>
+      <ul>
+        <li><a href="#" data-view="modules">Recon & OSINT</a></li>
+        <li><a href="#" data-view="modules">Networking</a></li>
+        <li><a href="#" data-view="modules">Linux Fundamentals</a></li>
+        <li><a href="#" data-view="modules">Web Vulnerabilities</a></li>
+        <li><a href="#" data-view="modules">Cryptography</a></li>
+        <li><a href="#" data-view="modules">Pentest Methodology</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="#">CTF Challenges</a></li>
+        <li><a href="#">Terminal Sim</a></li>
+        <li><a href="#">Progress Tracker</a></li>
+        <li><a href="#">Command Reference</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ABOUT</h4>
+      <ul>
+        <li><a href="#">Zero Trace Mission</a></li>
+        <li><a href="#">Curriculum Design</a></li>
+        <li><a href="#">Ethical Hacking Code</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ZERO TRACE CYBER LEGACY</span>
+      <span class="footer-status"><span class="status-dot"></span> SYSTEMS OPERATIONAL</span>
+    </div>
+  </footer>
+
+  <!-- CTF MODAL -->
+  <div id="ctf-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <p class="modal-tag" id="modal-tag">// CHALLENGE</p>
+      <h2 class="modal-title" id="modal-title">Challenge Name</h2>
+      <div class="modal-hint" id="modal-hint"></div>
+      <div class="modal-input-wrap">
+        <label for="flag-input">ENTER FLAG:</label>
+        <input type="text" id="flag-input" placeholder="FLAG{...}" autocomplete="off" />
+      </div>
+      <div class="modal-feedback" id="modal-feedback"></div>
+      <button class="btn-primary" id="submit-flag">SUBMIT FLAG</button>
+    </div>
+  </div>
+
+  <!-- Module Complete Modal -->
+  <div id="module-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box success-box">
+      <div class="success-icon">✓</div>
+      <h2 class="modal-title">MODULE COMPLETE</h2>
+      <p class="modal-desc" id="module-modal-desc"></p>
+      <button class="btn-primary" id="module-modal-close">CONTINUE →</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="lessondata.js"></script>
+  <script src="lesson.js"></script>
+  <script src="hero.js"></script>
+</body>
+</html>
